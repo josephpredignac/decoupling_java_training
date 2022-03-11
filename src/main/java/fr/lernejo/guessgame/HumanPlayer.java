@@ -18,9 +18,9 @@ public class HumanPlayer implements Player {
     public void respond(boolean lowerOrGreater) {
         Logger logger = LoggerFactory.getLogger("HumanPlayer");
         if (lowerOrGreater) {
-            logger.log("Le nombre est plus grand");
+            logger.log("plus grand");
         } else {
-            logger.log("Le nombre est plus petit");
+            logger.log("plus petit");
         }
     }
 }

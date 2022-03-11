@@ -37,15 +37,15 @@ public class Simulation {
     public void loopUntilPlayerSucceed(long maxIterations) {
         int iter = 0;
         LocalDateTime time = LocalDateTime.now();
-        logger.log("Devine le nombre entre 0 et 100");
+        logger.log("Devinez le nombre entre 0 et 100");
         while (!nextRound() && iter < maxIterations) {
             iter++;
         }
         Duration diff = Duration.between(time, LocalDateTime.now());
         logger.log(String.format("%02d:%02d.%03d", diff.toMinutesPart(), diff.toSecondsPart(), diff.toMillisPart()));
         if (iter >= maxIterations)
-            logger.log("Tu as perdu");
+            logger.log("Bouuh tu a perdu");
         else
-            logger.log("Félicitations !");
+            logger.log("Félicitations tu as trouvé !");
     }
 }
